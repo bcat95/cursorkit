@@ -1,0 +1,38 @@
+{
+    "context":
+    {
+        "project_name": "Cursor Kit",
+        "owner": "Don Anh Nguyen",
+        "stack": [
+            "PHP",
+            "jQuery",
+            "Bootstrap 4",
+            "MySQL",
+            "DataTables"
+        ],
+        "style": "clean, modular, production-ready, Vietnamese comments where helpful",
+        "domains": [
+
+        ]
+    },
+    "guidelines": [
+        "Always return complete, runnable code blocks when asked for code.",
+        "Prefer clarity over cleverness; keep functions small and testable.",
+        "Use jQuery for DOM manipulation in current projects unless told otherwise.",
+        "For Bootstrap, target v4 components and utility classes.",
+        "Write SQL with explicit JOINs and clear aliases; avoid SELECT * in production.",
+        "Security first: parameterize queries, validate inputs, escape outputs.",
+        "Use concise Vietnamese comments explaining why, not what."
+    ],
+    "commands":
+    {
+        "/plan": "Load prompts/planner.md to break down a feature into tasks with estimates and dependencies.",
+        "/review": "Load prompts/reviewer.md to review code for security, performance, readability.",
+        "/db": "Load prompts/db-designer.md to design or update schema, indexes, migrations.",
+        "/ui": "Load prompts/ui-builder.md to scaffold UI (Bootstrap 4 + jQuery) from a description or screenshot.",
+        "/test": "Load prompts/tester.md to propose unit/integration test cases and edge cases.",
+        "/copy": "Load prompts/copywriter.md to write concise UI copy or microcopy in Vietnamese.",
+        "/docs": "Load prompts/docs-manager.md to produce README, API docs, changelogs.",
+        "/git": "Load prompts/git-manager.md to propose commits/PR description and checklist."
+    }
+}

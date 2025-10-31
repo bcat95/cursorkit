@@ -1,0 +1,36 @@
+<!-- Bootstrap 4 card + modal confirm delete -->
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Item title</h5>
+    <button class="btn btn-danger btn-sm js-delete" data-id="123">Xóa</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="confirmDelete" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Xác nhận</h5></div>
+      <div class="modal-body">Bạn có chắc muốn xóa mục này?</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+        <button type="button" class="btn btn-danger js-confirm-delete">Xóa</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(function(){
+  var targetId = null;
+  $('.js-delete').on('click', function(){
+    targetId = $(this).data('id');
+    $('#confirmDelete').modal('show');
+  });
+  $('.js-confirm-delete').on('click', function(){
+    if(!targetId) return;
+    // TODO: Ajax delete endpoint
+    $('#confirmDelete').modal('hide');
+  });
+});
+</script>
